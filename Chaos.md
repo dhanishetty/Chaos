@@ -66,8 +66,8 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
         - For example, with targets and capabilities, you can allow the CPU pressure fault to run against your `production virtual machines` while preventing the kill process fault from running against them.
 
    1. **Targets:** a Target is the specific part of your system (like a virtual machine, database, or network) that you want to intentionally "break" or test with chaos experiments. 
-      * how it's allowed to mess with it is `the "target type"`.
-       - A target type represents the method of injecting faults against a resource.
+      * how it's allowed to mess with it, is the `"target type"`.
+       
        - Resource types that only support `service-direct` faults have one target type.
          * An example is the Microsoft-CosmosDB type for Azure Cosmos DB.
        - Resource types that support `service-direct` and `agent-based` faults have two target types.
