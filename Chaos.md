@@ -30,8 +30,8 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
         - Each step has one or more branches that run at the same time. 
         - Steps and branches allow you to inject multiple faults across resources in your environment in parallel.
         - Each branch has one or more actions, which are either the faults you want to run or time delays. 
-          - Examples include applying virtual memory pressure or killing a process.
-          - ![alt text](image.png)
+          
+           ![alt text](image.png)
 
 
 
