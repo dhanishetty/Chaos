@@ -89,7 +89,15 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
        * The target resource has a child resource formatted like this example:
           + `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myRG/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine/capabilities/shutdown-1.0`
        
-       
+---
+### Target selection in Azure Chaos Studio
+
+1. **List-based manual target selection:** allows you to select a fixed set of onboarded targets for a particular fault in your chaos experiment.
+2. **Query-based dynamic target selection:** allows you to input a KQL query that selects all onboarded targets that match the query result set.
+      -  Using your query, you can filter targets based on common Azure resource parameters including type, region, name, and more.
+      -  Upon experiment creation time, only the query itself is added to your chaos experiment.
+4. **Target scoping:** "Target scoping" means you can choose to make a chaos experiment affect only a very specific part or function within a larger Azure resource, instead of the whole thing. 
+      - For example, instead of shutting down an entire group of virtual machines, you might use target scoping to only shut down a specific instance within that group. If you don't choose a specific scope, the fault will apply to the entire resource you've targeted.
 ---
 # Chaos Experiment Details
 
