@@ -28,8 +28,10 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
    2. **Logic:** The rest of the experiment describes how and when to run faults. 
         - An experiment is organized into steps that run one after the other. 
         - Each step has one or more branches that run at the same time. 
-        - Steps and branches allow you to inject multiple faults across resources in your environment in parallel. 
+        - Steps and branches allow you to inject multiple faults across resources in your environment in parallel.
+        - Each branch has one or more actions, which are either the faults you want to run or time delays. 
           - Examples include applying virtual memory pressure or killing a process.
+          - ![alt text](image.png)
 
 
 
