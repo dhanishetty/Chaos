@@ -1,4 +1,4 @@
-Chaos engineering is the discipline of intentionally injecting failures into your systems to see how they respond.
+### Chaos engineering is the discipline of intentionally injecting failures into your systems to see how they respond.
 
 It is to move from a reactive to a proactive approach to build resilient systems.
 1.	Uncovering Hidden Weaknesses
@@ -15,9 +15,9 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
 * Polly allows you to wrap your C# code (e.g., an HttpClient call) inside one or more "policies."
 
 1. Retry : This is the simplest and most common policy. If an operation fails, try it again.
-- What it does: Catches a specific exception (like a network error) and re-runs your code.
-- Best Practice: Use it with a "wait and retry" strategy, often with exponential backoff (e.g., wait 1s, then 2s, then 4s). This prevents you from hammering a service that is already struggling.
-- Chaos Studio Context: Chaos Studio adds 500ms of network latency. Your code times out and fails. The Polly Retry policy catches the timeout, waits, and tries again, and this time it succeeds.
+   - What it does: Catches a specific exception (like a network error) and re-runs your code.
+   - Best Practice: Use it with a "wait and retry" strategy, often with exponential backoff (e.g., wait 1s, then 2s, then 4s). This prevents you from hammering a service that is already struggling.
+   - Chaos Studio Context: Chaos Studio adds 500ms of network latency. Your code times out and fails. The Polly Retry policy catches the timeout, waits, and tries again, and this time it succeeds.
 
 2. Circuit Breaker : This is a critical pattern for preventing cascading failures.
 
