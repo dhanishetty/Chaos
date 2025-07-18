@@ -37,7 +37,7 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
         - Each branch has one or more actions, which are either the faults you want to run or time delays. 
           
            ![alt text](image.png)
-
+---
 ### Faults and Actions
 
    1. **Action:** Every activity that happens as part of an experiment is called an action.
@@ -51,9 +51,30 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
          1. **Faults:** This action causes a disruption in one or more resources.
          2. **Time delays:** This action "waits" without affecting any resources. It's useful for pausing in between faults to wait for a system to be affected by the previous fault.
 
-   2. **Agent-based:** These faults run in VMs or virtual machine scale sets to do in-guest failures. 
-       - Examples include applying virtual memory pressure or killing a process.
+   2. **Faults:** Faults are the most common action in Chaos Studio. Faults cause a disruption in a system. 
+       - Faults can be:
+            * Be destructive. For example, a fault can kill a process.
+            * Apply pressure. For example, a fault can add virtual memory pressure.
+            * Add latency.
+            * Cause a configuration change.
+---
+### Targets and capabilities:
 
+   * Before you can inject a fault against an Azure resource.
+   * The resource must first have corresponding targets and capabilities enabled. 
+   * Targets and capabilities control which resources are enabled for fault injection and which faults can run against those resources.
+        - For example, with targets and capabilities, you can allow the CPU pressure fault to run against your `production virtual machines` while preventing the kill process fault from running against them.
+
+   1. **Targets:** a Target is the specific part of your system (like a virtual machine, database, or network) that you want to intentionally "break" or test with chaos experiments. 
+      * how it's allowed to mess with it is `the "target type"`.
+       - A target type represents the method of injecting faults against a resource.
+       - Resource types that only support `service-direct` faults have one target type.
+         * An example is the Microsoft-CosmosDB type for Azure Cosmos DB.
+       - Resource types that support `service-direct` and `agent-based` faults have two target types.
+         * One target type is for `service-direct` faults (for example, Microsoft-VirtualMachine).
+         * The other target type is for `agent-based` faults (always Microsoft-Agent).
+   2. **bsdcuybsudbusdb** ooooooooooooooooooo. 
+       - ewhiwehjiwhciwehjiwheiwhcicijc
 ---
 # Chaos Experiment Details
 
