@@ -8,6 +8,14 @@ It is to move from a reactive to a proactive approach to build resilient systems
 
 This concept was first started by Netflix in the late 2000s. They created "Chaos Monkey," a tool that randomly terminated production instances.
 
+### Chaos Studio scenarios
+1. Shift right: production or preproduction environment. Usually, with real customer traffic or simulated load.
+2. Shift left: development or shared test environment. without any real customer traffic.
+
+
+
+
+
 
 
 * Polly is a .NET resilience and transient-fault-handling library.
