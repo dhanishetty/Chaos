@@ -38,12 +38,26 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
           
            ![alt text](image.png)
 
+### Faults and Actions
 
+   1. **Action:** Every activity that happens as part of an experiment is called an action.
+       - The most common type of action is a fault.
+       - Actions are organized into steps and branches, enabling actions to run either sequentially or in parallel. 
+       - Every action has the following properties:
+          1. **Name:** The specific action that takes place. A name usually takes the form of a URN for the action, for example, urn.
+          2. **Type:** The way that the action executes. 
+                - either continuous or discrete.
+        ### Types of actions          
+         1. **Faults:** This action causes a disruption in one or more resources.
+         2. **Time delays:** This action "waits" without affecting any resources. It's useful for pausing in between faults to wait for a system to be affected by the previous fault.
+
+   2. **Agent-based:** These faults run in VMs or virtual machine scale sets to do in-guest failures. 
+       - Examples include applying virtual memory pressure or killing a process.
 
 ---
 # Chaos Experiment Details
 
-| Field        | Description                                                                     |
+| **Field**        | **Description**                                                                     |
 | :----------- | :------------------------------------------------------------------------------ |
 | **Hypothesis** | Define the objective and expected outcomes of the experiment.                   |
 | **Target Scope** | Identify which part of the system will be subjected to chaos experiments (e.g., network, database, application layer). |
