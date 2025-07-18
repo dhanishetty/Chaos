@@ -12,12 +12,12 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
  * You can use the Azure portal or the Chaos Studio REST API to create, update, start, cancel, and view the status of an experiment. 
  * Chaos experiments can target resources in a different subscription than the experiment if the subscription is within the same Azure tenant. 
  * Chaos experiments can target resources in a different region than the experiment if the region is a supported region for Chaos Studio.
-
+---
 ### Chaos Studio scenarios
    1. **Shift right:** production or preproduction environment. Usually, with real customer traffic or simulated load.
    2. **Shift left:** development or shared test environment. without any real customer traffic.
 
-
+---
 ### Chaos Studio supports two types of faults:
 
    1. **Service-direct:** These faults run directly against an Azure resource, without any installation or instrumentation. 
@@ -25,7 +25,7 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
    2. **Agent-based:** These faults run in VMs or virtual machine scale sets to do in-guest failures. 
        - Examples include applying virtual memory pressure or killing a process.
 
-
+---
 ### Chaos experiment is divided into two sections:
 
    1. **Selectors:** Groups of target resources that have faults or other actions run against them.. 
