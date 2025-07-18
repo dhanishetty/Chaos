@@ -101,7 +101,7 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
 ---
 ### Quickstart: Create and run a chaos experiment by using Azure Chaos Studio
    1. Prerequisites: You need an Azure subscription and a Linux virtual machine.
-   2. Register Resource Provider: Register the Microsoft.Chaos resource provider in your subscription.
+   2. Register Resource Provider: Register the Microsoft Chaos resource provider in your subscription.
    3. Enable Chaos Studio on VM: In the Chaos Studio portal, select your VM as a "target" to enable Chaos Studio on it.
    4. Create Experiment: Create a new chaos experiment, defining the "fault" you want to introduce (e.g., VM shutdown) and its duration.
    5. Grant Permissions: Grant the experiment's managed identity the "Virtual Machine Contributor" role on the VM's Access control (IAM) page.
