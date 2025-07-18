@@ -15,8 +15,10 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
 
 ### Chaos Studio supports two types of faults:
 
-   1. **Service-direct:** These faults run directly against an Azure resource, without any installation or instrumentation. Examples include rebooting an Azure Cache for Redis cluster or adding network latency to Azure Kubernetes Service pods.
-   2. **Agent-based:** These faults run in VMs or virtual machine scale sets to do in-guest failures. Examples include applying virtual memory pressure or killing a process.
+   1. **Service-direct:** These faults run directly against an Azure resource, without any installation or instrumentation. 
+    - Examples include rebooting an Azure Cache for Redis cluster or adding network latency to Azure Kubernetes Service pods.
+   2. **Agent-based:** These faults run in VMs or virtual machine scale sets to do in-guest failures. 
+    - Examples include applying virtual memory pressure or killing a process.
 
 
 
