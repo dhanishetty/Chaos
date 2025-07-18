@@ -5,6 +5,7 @@ It is to move from a reactive to a proactive approach to build resilient systems
   - Improve System Resilience
   - Reduce Downtime and Costs
   - Validate Monitoring and Alerting
+
 This concept was first started by Netflix in the late 2000s. They created "Chaos Monkey," a tool that randomly terminated production instances.
 
 
