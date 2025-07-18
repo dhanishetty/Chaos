@@ -1,10 +1,10 @@
 ### Chaos engineering is the discipline of intentionally injecting failures into your systems to see how they respond.
 
 It is to move from a reactive to a proactive approach to build resilient systems.
-    1. Uncovering Hidden Weaknesses
-    2. Improve System Resilience
-    3. Reduce Downtime and Costs
-    4. Validate Monitoring and Alerting
+  - Uncovering Hidden Weaknesses
+  - Improve System Resilience
+  - Reduce Downtime and Costs
+  - Validate Monitoring and Alerting
 This concept was first started by Netflix in the late 2000s. They created "Chaos Monkey," a tool that randomly terminated production instances.
 
 
