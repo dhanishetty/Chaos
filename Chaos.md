@@ -8,6 +8,11 @@ It is to move from a reactive to a proactive approach to build resilient systems
 
 This concept was first started by Netflix in the late 2000s. They created "Chaos Monkey," a tool that randomly terminated production instances.
 
+ * A chaos experiment is an Azure resource deployed to a subscription, resource group, and region. 
+ * You can use the Azure portal or the Chaos Studio REST API to create, update, start, cancel, and view the status of an experiment. 
+ * Chaos experiments can target resources in a different subscription than the experiment if the subscription is within the same Azure tenant. 
+ * Chaos experiments can target resources in a different region than the experiment if the region is a supported region for Chaos Studio.
+
 ### Chaos Studio scenarios
    1. **Shift right:** production or preproduction environment. Usually, with real customer traffic or simulated load.
    2. **Shift left:** development or shared test environment. without any real customer traffic.
@@ -34,6 +39,24 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
            ![alt text](image.png)
 
 
+
+---
+# Chaos Experiment Details
+
+| Field        | Description                                                                     |
+| :----------- | :------------------------------------------------------------------------------ |
+| **Hypothesis** | Define the objective and expected outcomes of the experiment.                   |
+| **Target Scope** | Identify which part of the system will be subjected to chaos experiments (e.g., network, database, application layer). |
+| **Target** | Determine the specific targets or components within the system.                 |
+| **Environment** | Define whether the experiment will be conducted in a production, staging, or development environment. |
+| **Duration** | Specify the time frame for the chaos experiment.                                |
+| **Observations** | Record any data or behavior observed during the experiment.                     |
+| **Results** | Summarize the findings and outcomes of the experiment.                          |
+| **Action Items** | List any action items or steps to be taken based on the results.                |
+
+---
+
+This table provides a clear and organized way to outline the essential details for any chaos experiment. Do you have a specific experiment in mind that you'd like to plan out using this table?
 
 * Polly is a .NET resilience and transient-fault-handling library.
 * With Polly, you can gracefully handle these issues and make your application robust and self-healing.
