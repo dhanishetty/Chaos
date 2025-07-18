@@ -21,6 +21,16 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
        - Examples include applying virtual memory pressure or killing a process.
 
 
+### Chaos experiment is divided into two sections:
+
+   1. **Selectors:** Groups of target resources that have faults or other actions run against them.. 
+       - For example, you might have a selector named AllNonProdEastUSVMs, in which you've added all the nonproduction virtual machines in East US. You could then apply CPU pressure followed by virtual memory pressure to those virtual machines by referencing the selector..
+   2. **Logic:** The rest of the experiment describes how and when to run faults. 
+        - An experiment is organized into steps that run one after the other. 
+        - Each step has one or more branches that run at the same time. 
+        - Steps and branches allow you to inject multiple faults across resources in your environment in parallel. 
+          - Examples include applying virtual memory pressure or killing a process.
+
 
 
 * Polly is a .NET resilience and transient-fault-handling library.
