@@ -69,12 +69,26 @@ This concept was first started by Netflix in the late 2000s. They created "Chaos
       * how it's allowed to mess with it, is the `"target type"`.
        
        - Resource types that only support `service-direct` faults have one target type.
-         * An example is the Microsoft-CosmosDB type for Azure Cosmos DB.
+         * An example is the `Microsoft-CosmosDB` type for Azure Cosmos DB.
        - Resource types that support `service-direct` and `agent-based` faults have two target types.
-         * One target type is for `service-direct` faults (for example, Microsoft-VirtualMachine).
-         * The other target type is for `agent-based` faults (always Microsoft-Agent).
-   2. **bsdcuybsudbusdb** ooooooooooooooooooo. 
-       - ewhiwehjiwhciwehjiwheiwhcicijc
+         * One target type is for `service-direct` faults (for example, `Microsoft-VirtualMachine`).
+         * The other target type is for `agent-based` faults (always `Microsoft-Agent`).
+         * A target defines the target type that's enabled on the resource.
+            - For example, if you're onboarding an Azure Cosmos DB instance with this resource ID:
+                * `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/chaosstudiodemo/providers/Microsoft.DocumentDB/databaseAccounts/myDB`
+            - The Azure Cosmos DB resource has a child resource formatted like this example:
+                * `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/chaosstudiodemo/providers/Microsoft.DocumentDB/databaseAccounts/myDB/providers/Microsoft.Chaos/targets/Microsoft-CosmosDB`
+   2. **Capabilities:** A capability enables Chaos Studio to run a particular fault against a resource, such as shutting down a virtual machine. 
+       - Capabilities are unique per target type.
+       - They represent the fault that they enable.
+       - for example, `CPUPressure-1.0`.
+       
+       * A capability is an extension resource created as a child of a target. For example, if you're enabling the shutdown fault on a virtual machine with a service-direct target ID:
+        - `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myRG/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine`
+       * The target resource has a child resource formatted like this example:
+        - `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myRG/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine/capabilities/shutdown-1.0`
+       
+       
 ---
 # Chaos Experiment Details
 
